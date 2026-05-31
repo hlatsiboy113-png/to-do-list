@@ -1,0 +1,122 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+
+  background: linear-gradient(
+    to bottom,
+    #87ceeb 0%,
+    #bde5ff 50%,
+    #eaf7ff 100%
+  );
+
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+  filter: blur(10px);
+  z-index: -1;
+}
+
+body::before {
+  width: 300px;
+  height: 100px;
+  top: 80px;
+  left: 50px;
+
+  box-shadow:
+    80px -20px 0 20px rgba(255,255,255,0.8),
+    160px 0 0 10px rgba(255,255,255,0.8);
+}
+
+body::after {
+  width: 250px;
+  height: 80px;
+  bottom: 100px;
+  right: 80px;
+
+  box-shadow:
+    70px -15px 0 15px rgba(255,255,255,0.8),
+    140px 0 0 10px rgba(255,255,255,0.8);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+
+  background: rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #0f172a;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 12px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  background: #1d4ed8;
+}
+
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+
+#taskList {
+  max-width: 900px;
+  margin: auto;
+  padding: 0;
+}
+
+@keyframes floatClouds {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(60px);
+  }
+}
+
+body::before,
+body::after {
+  animation: floatClouds 20s ease-in-out infinite alternate;
+}
