@@ -7,7 +7,7 @@ This project demonstrates DOM manipulation, event handling, and local storage in
 
 ## 🚀 Features
 
-- ➕ Add new tasks
+- ➕ Add new action items
 - ✔️ Mark tasks as complete/incomplete
 - ❌ Delete tasks
 - 🔍 Filter tasks (All / Active / Completed)
