@@ -30,7 +30,7 @@ function addTask() {
   };
 
   tasks.push(task);
-  input.value = "";
+  input.value = ""; document.getElementById("priority").value = "medium";
   renderTasks();
 }
 
